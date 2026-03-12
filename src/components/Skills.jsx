@@ -22,23 +22,24 @@ export default function Skills() {
   return (
     <section id="skills" className="py-5">
       <Container>
-        <h2 className="mb-4 text-center">Skills</h2>
+        <h2 className="mb-5 section-title">My <span className="text-gradient">Skills</span></h2>
         <Row className="g-4 text-center">
           {skills.map((skill, idx) => {
             const Icon = skill.icon;
             return (
               <Col xs={6} md={4} lg={3} key={idx}>
                 <motion.div 
-                  className="p-3 shadow-sm rounded h-100"
+                  className="p-4 glass-panel h-100"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.05 }}
                   viewport={{ once: true }}
+                  whileHover={{ y: -5, scale: 1.05 }}
                 >
-                  <div className="fs-1 mb-2" style={{ color: skill.color }}>
+                  <div className="fs-1 mb-3 drop-shadow" style={{ color: skill.color, filter: `drop-shadow(0 0 10px ${skill.color}80)` }}>
                     <Icon />
                   </div>
-                  <h6 className="fw-bold">{skill.name}</h6>
+                  <h6 className="fw-bold mb-0 text-white">{skill.name}</h6>
                 </motion.div>
               </Col>
             )

@@ -55,11 +55,14 @@ export default function Hero3D() {
       </Canvas>
 
       {/* overlay text/content */}
-      <div className="hero-overlay d-flex flex-column justify-content-center align-items-center text-center text-light">
-        <motion.div initial="hidden" animate="show" variants={heroText}>
-          <h1 className="display-5 fw-bold">Rahul Singh Chouhan</h1>
-          <p className="lead mb-3">Full-Stack Developer — React · Node · Automation</p>
-          <a href="#projects" className="btn btn-outline-light btn-lg">View My Work</a>
+      <div className="hero-overlay d-flex flex-column justify-content-center align-items-center text-center">
+        <motion.div initial="hidden" animate="show" variants={heroText} className="hero-content-inner">
+          <h1 className="display-4 fw-bold text-white mb-3 text-shadow">Rahul Singh Chouhan</h1>
+          <p className="lead mb-4 text-secondary-glow fs-4">Full-Stack Developer <span className="text-gradient fw-bold">— React · Node · Automation</span></p>
+          <div className="d-flex gap-3 justify-content-center">
+            <a href="#projects" className="btn btn-premium btn-lg">View My Work</a>
+            <a href="#about" className="btn btn-outline-premium btn-lg">About Me</a>
+          </div>
         </motion.div>
       </div>
     </div>

@@ -3,9 +3,9 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 
 export default function SiteNavbar() {
   return (
-    <Navbar bg="light" expand="lg" fixed="top" className="shadow-sm">
+    <Navbar expand="lg" fixed="top" className="navbar-custom shadow-sm" variant="dark">
       <Container>
-        <Navbar.Brand href="#home" className="fw-bold">Rahul Singh Chouhan</Navbar.Brand>
+        <Navbar.Brand href="#home" className="fw-bold text-gradient">Rahul Singh Chouhan</Navbar.Brand>
         <Navbar.Toggle aria-controls="main-nav" />
         <Navbar.Collapse id="main-nav">
           <Nav className="ms-auto">

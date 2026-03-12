@@ -9,13 +9,16 @@ export default function ProjectCard({ title, description, tech, link, Icon }) {
       whileInView={{ opacity: 1, y: 0 }} 
       transition={{ duration: 0.6 }} 
       viewport={{ once: true }}
+      className="h-100"
     >
-      <Card className="h-100 shadow-sm border-0 text-center p-3">
-        {Icon && <div className="fs-1 mb-3 text-primary">{<Icon />}</div>}
-        <Card.Body>
-          <Card.Title className="fw-bold">{title}</Card.Title>
-          <Card.Text className="text-muted">{description}</Card.Text>
-          <p><strong>Tech:</strong> {tech}</p>
+      <Card className="h-100 border-0 text-center p-4 glass-panel bg-transparent">
+        {Icon && <div className="fs-1 mb-4 text-gradient">{<Icon />}</div>}
+        <Card.Body className="d-flex flex-column p-0">
+          <Card.Title className="fw-bold mb-3 fs-4 text-white">{title}</Card.Title>
+          <Card.Text className="text-secondary-glow flex-grow-1">{description}</Card.Text>
+          <div className="mt-4 pt-3 border-top border-secondary">
+            <span className="text-gradient fw-bold fs-6">{tech}</span>
+          </div>
         </Card.Body>
       </Card>
     </motion.div>

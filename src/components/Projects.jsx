@@ -37,9 +37,9 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-5 bg-light">
+    <section id="projects" className="py-5" style={{ background: 'var(--bg-darker)' }}>
       <Container>
-        <h2 className="mb-4 text-center">Projects</h2>
+        <h2 className="mb-5 section-title">Featured <span className="text-gradient">Projects</span></h2>
         <Row className="g-4">
           {projects.map((proj, idx) => (
             <Col md={6} lg={4} key={idx}>

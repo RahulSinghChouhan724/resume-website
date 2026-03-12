@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import SiteNavbar from './components/SiteNavbar';
-const Hero3D = React.lazy(() => import('./components/Hero3D'));
+const HeroCyberpunk = React.lazy(() => import('./components/HeroCyberpunk'));
 import About from './components/About';
 import Projects from './components/Projects';
 import Skills from './components/Skills';
@@ -14,8 +14,8 @@ function App() {
       <SiteNavbar />
       <main>
         <section id="home">
-          <Suspense fallback={<div style={{height: 360}} />}> 
-            <Hero3D />
+          <Suspense fallback={<div style={{height: '100vh', background: 'var(--bg-dark)'}} />}> 
+            <HeroCyberpunk />
           </Suspense>
         </section>
 
@@ -34,6 +34,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;
